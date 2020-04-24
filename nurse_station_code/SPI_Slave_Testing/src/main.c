@@ -87,7 +87,7 @@ int main(void)
 
     while (1)
     {
-        if ((SPI1->SR & SPI_SR_RXNE) != 0x0)
+        if ((SPI1->DR) != 0x0)
         {
             GPIOB->ODR |= 0x00008000;  // turn on the LED at PB15
         }
